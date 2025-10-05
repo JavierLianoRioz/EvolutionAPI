@@ -1,0 +1,16 @@
+# Archivos de entorno
+.env
+
+# Directorios de datos de los servicios
+/n8n_data
+/evolution_api_data
+
+# Logs
+*.log
+
+# Dependencias de Node.js (si se usaran localmente)
+node_modules
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
