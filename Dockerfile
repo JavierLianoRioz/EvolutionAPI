@@ -2,7 +2,7 @@
 FROM n8nio/n8n
 
 # Etiqueta para identificar al autor de la imagen
-LABEL maintainer="tu_nombre@example.com"
+LABEL maintainer="${MAINTAINER_EMAIL}"
 
 # Opcional: Si necesitaras instalar nodos de la comunidad de n8n, 
 # puedes descomentar y adaptar la siguiente línea.

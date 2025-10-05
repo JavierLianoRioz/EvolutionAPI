@@ -1,5 +1,8 @@
 # Archivos de entorno
 .env
+.env.local
+.env.production
+.env.development
 
 # Directorios de datos de los servicios
 /n8n_data
@@ -14,3 +17,14 @@ node_modules
 # Archivos de sistema operativo
 .DS_Store
 Thumbs.db
+
+# Archivos de configuración con credenciales
+config/credentials.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Archivos temporales
+tmp/
+temp/

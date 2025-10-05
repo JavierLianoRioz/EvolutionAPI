@@ -8,11 +8,11 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=admin # Cambia este usuario
-      - N8N_BASIC_AUTH_PASSWORD=password # Cambia esta contraseña
-      - TZ=America/Bogota # Ajusta a tu zona horaria
-      - GENERIC_TIMEZONE=America/Bogota
+      - N8N_BASIC_AUTH_ACTIVE=${N8N_BASIC_AUTH_ACTIVE}
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
+      - TZ=${TZ}
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
       - ./n8n_data:/home/node/.n8n
     command: /bin/sh -c "n8n start"
@@ -24,10 +24,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - API_KEY=tu_api_key_secreta # ¡IMPORTANTE! Cambia esta clave
-      - SERVER_URL=http://localhost:8080
+      - API_KEY=${API_KEY}
+      - SERVER_URL=${SERVER_URL}
       # Configuración de la base de datos (opcional, usa archivos por defecto)
-      - DATABASE_ENABLED=false
+      - DATABASE_ENABLED=${DATABASE_ENABLED}
       # Otras variables de entorno de Evolution API que necesites
     volumes:
       - ./evolution_api_data:/app/dist/instances
